@@ -14,7 +14,7 @@ pipeline{
 				post {
 					success{
 						echo "Archiving the Artifacts"
-						archieveArtifacts artifacts: '**/target/*.war'
+						archiveArtifacts artifacts: '**/target/*.war', followSymlinks: false
 					}
 				}
 			}
